@@ -101,57 +101,64 @@
       <DependentUpon>MyDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="MyModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MyModel.edmx</DependentUpon>
+      <LastGenOutput>MyModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MyModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MyModel.edmx</DependentUpon>
+      <LastGenOutput>MyModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
-    <Content Include="МъМодел.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>МъМодел.Context.cs</LastGenOutput>
-      <DependentUpon>МъМодел.edmx</DependentUpon>
-    </Content>
-    <Content Include="МъМодел.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>МъМодел.edmx</DependentUpon>
-      <LastGenOutput>МъМодел.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Category.cs">
-      <DependentUpon>МъМодел.tt</DependentUpon>
+      <DependentUpon>MyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MyModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="OrderDetail.cs">
-      <DependentUpon>МъМодел.tt</DependentUpon>
+      <DependentUpon>MyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="OrderMaster.cs">
-      <DependentUpon>МъМодел.tt</DependentUpon>
+      <DependentUpon>MyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>МъМодел.tt</DependentUpon>
+      <DependentUpon>MyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>МъМодел.tt</DependentUpon>
-    </Compile>
-    <Compile Include="МъМодел.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>МъМодел.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="МъМодел.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>МъМодел.tt</DependentUpon>
-    </Compile>
-    <Compile Include="МъМодел.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>МъМодел.edmx</DependentUpon>
+      <DependentUpon>MyModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <EntityDeploy Include="MyModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MyModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="MyModel.edmx.diagram">
+      <DependentUpon>MyModel.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -159,13 +166,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <EntityDeploy Include="МъМодел.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>МъМодел.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="МъМодел.edmx.diagram">
-      <DependentUpon>МъМодел.edmx</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

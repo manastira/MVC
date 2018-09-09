@@ -13,10 +13,10 @@ namespace AdvMasterDetails
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MasterDetailsEntities : DbContext
+    public partial class MasterDetailsEntities1 : DbContext
     {
-        public MasterDetailsEntities()
-            : base("name=MasterDetailsEntities")
+        public MasterDetailsEntities1()
+            : base("name=MasterDetailsEntities1")
         {
         }
     
